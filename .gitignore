@@ -15,9 +15,8 @@ dist-ssr
 
 
 
-SocialSignIn
-Providers
 
+Providers
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
