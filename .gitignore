@@ -12,6 +12,17 @@ dist
 dist-ssr
 *.local
 
+
+Footer
+ErrorPage
+SocialSignIn
+Home
+Login
+Register
+Providers
+Route
+firebase.init.js
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
