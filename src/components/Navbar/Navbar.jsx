@@ -11,6 +11,8 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/categories">Categories</NavLink></li>
+        <li><NavLink to="/addProduct">Add Product</NavLink></li>
+        <li><NavLink to="/myCart">My Cart</NavLink></li>
     </>
 
     const handleLogOut = () => {
@@ -41,11 +43,13 @@ const Navbar = () => {
                     <Link to="/"><img className="md:w-20" src={Logo2} alt="Omexo" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 shadow-md">
                         {links}
                     </ul>
                 </div>
+                <input type="checkbox" className="toggle toggle-md mx-10" checked />
                 <div className="navbar-end">
+                    
                     {
                         user && <div className="hidden md:flex items-center gap-4 mr-4 text-blue-500"><img className="w-9 rounded-full" src={user.photoURL || noUser} alt="avater"
                         /> <p>{user.displayName || user.email}</p> </div>
