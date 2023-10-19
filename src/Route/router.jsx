@@ -31,9 +31,9 @@ export const myRoute = createBrowserRouter([
                 element: <Categories></Categories>,
             },
             {
-                path: "/categories:id",
-                element: <Category></Category>,
-                loader: ({params})=> fetch(`http://localhost:5173/categories/${params._id}`)
+                path: "/categories/categoriesDetails/:id",
+                element: <CategoryDetails></CategoryDetails>,
+                loader: ({params})=> fetch(`http://localhost:5001/categorys/categories/categoriesDetails/${params.id}`)
             },
             
         ]

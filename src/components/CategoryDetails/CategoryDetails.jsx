@@ -5,7 +5,7 @@ const CategoryDetails = () => {
     console.log(singleCategory);
     return (
         <div>
-            CategoryDetails for ID: 
+            
         </div>
     );
 };

@@ -5,7 +5,7 @@ const HomeBanner = () => {
         <div className="grid grid-cols-3 w-11/12 mx-auto">
             <div className="col-span-2">
                 <div className="carousel w-full">
-                    <div id="slide1" className="carousel-item relative w-full bg-[url('./assets/slider1.webp')] bg-no-repeat bg-center bg-origin-padding">
+                    <div id="slide1" className="carousel-item relative w-full bg-[url('./assets/slider1.webp')] bg-no-repeat bg-center">
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide4" className="btn btn-circle">❮</a>
                             <div className="flex  justify-between gap-x-5">
@@ -13,9 +13,6 @@ const HomeBanner = () => {
                                     <h3 className="text-3xl text-left">Sale Offer Black Friday This Week</h3>
                                     <h1 className="text-6xl">Work Desk Surface Studio 2018</h1>
                                     <h3 className="text-3xl"> Starting at <span className="text-red-500 font-semibold">$1209.00</span></h3>
-                                </div>
-                                <div id="banner-right">
-
                                 </div>
                             </div>
                             <a href="#slide2" className="btn btn-circle">❯</a>
