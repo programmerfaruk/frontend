@@ -10,6 +10,7 @@ const Navbar = () => {
     const navigate = useNavigate()
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/categories">Categories</NavLink></li>
     </>
 
     const handleLogOut = () => {
