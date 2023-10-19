@@ -1,20 +1,15 @@
 import { useLoaderData } from "react-router-dom";
+import Products from "../Products/Products";
 
 const CategoryDetails = () => {
     const singleCategory = useLoaderData()
-    console.log(singleCategory);
+    // console.log(singleCategory.products);
     return (
         <div>
+            {
+                singleCategory.products.map((product, idx) => <Products key={idx} product={product}></Products>)
+            }
             <p>slider </p>
-            <p>Image </p>
-            <p> Name</p>
-            <p> Band Name</p>
-            <p>Type </p>
-            <p> Price</p>
-            <p>Rating </p>
-            <p>Details button</p>
-            <p>Update button </p>
-
         </div>
     );
 };
