@@ -10,6 +10,7 @@ import AddProduct from "../Pages/AddProduct/AddProduct";
 import MyCart from "../Pages/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
 import ProductDetails from "../components/Products/ProductDetails";
+import AllProducts from "../components/Products/AllProducts";
 
 export const myRoute = createBrowserRouter([
     {
@@ -34,6 +35,11 @@ export const myRoute = createBrowserRouter([
                 element: <Categories></Categories>,
             },
             {
+                path: "/allProduct",
+                element: <AllProducts></AllProducts>,
+                loader: ()=> fetch("http://localhost:5001/product")
+            },
+            {
                 path: "/categories/categoriesDetails/:id",
                 element: <PrivateRoute><CategoryDetails></CategoryDetails></PrivateRoute>,
                 loader: ({params})=> fetch(`http://localhost:5001/categories/categoriesDetails/${params.id}`)
@@ -47,8 +53,9 @@ export const myRoute = createBrowserRouter([
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
             },
             {
-                path: "/productDetails/:name",
+                path: "/productDetails/:id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+                loader: ({params})=> fetch(`http://localhost:5001/product/${params.id}`)
             },
             
         ]
