@@ -5,7 +5,7 @@ const CategoryDetails = () => {
     const singleCategory = useLoaderData()
     // console.log(singleCategory.products);
     return (
-        <div>
+        <div className="grid grid-cols-2 gap-4 w-11/12 mx-auto">
             {
                 singleCategory.products.map((product, idx) => <Products key={idx} product={product}></Products>)
             }

@@ -9,6 +9,7 @@ import CategoryDetails from "../components/CategoryDetails/CategoryDetails";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import MyCart from "../Pages/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
+import ProductDetails from "../components/Products/ProductDetails";
 
 export const myRoute = createBrowserRouter([
     {
@@ -42,8 +43,12 @@ export const myRoute = createBrowserRouter([
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
             },
             {
-                path: "myCart",
+                path: "/myCart",
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+            },
+            {
+                path: "/productDetails/:name",
+                element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
             },
             
         ]

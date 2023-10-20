@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const Products = ({product}) => {
     console.log(product);
@@ -11,7 +13,7 @@ const Products = ({product}) => {
                 <div  className="badge badge-secondary"><span>Brand: </span> {product.brand}</div>
                 <p>Price: {product.price}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Details</button>
+                    <Link  to={`/productDetails/${product.name}`}><button className="btn btn-primary">Details</button></Link>
                     <button className="btn btn-primary">Add to Cart</button>
                     <button className="btn btn-primary">Update Product</button>
                 </div>
