@@ -13,6 +13,7 @@ const Navbar = () => {
         <li><NavLink to="/categories">Categories</NavLink></li>
         <li><NavLink to="/addProduct">Add Product</NavLink></li>
         <li><NavLink to="/allProduct">All Product</NavLink></li>
+        <li><NavLink to="/updateProduct">Update Product</NavLink></li>
         <li><NavLink to="/myCart">My Cart</NavLink></li>
     </>
 

@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 
 const AddProduct = () => {
     const [selectedBrand, setSelectedBrand] = useState('');
-    const formRef = useRef(); // Create a ref for the form element
+    const formRef = useRef(); 
 
     const handleSelectChange = (e) => {
         setSelectedBrand(e.target.value);

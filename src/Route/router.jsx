@@ -11,13 +11,16 @@ import MyCart from "../Pages/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
 import ProductDetails from "../components/Products/ProductDetails";
 import AllProducts from "../components/Products/AllProducts";
+import UpdateProduct from "../components/UpdateProduct/UpdateProduct";
+import BrandDetails from "../components/BrandList/BrandDetails";
+import BrandList from "../components/BrandList/BrandList";
 
 export const myRoute = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
         errorElement: <ErrorPage></ErrorPage>,
-        children:[
+        children: [
             {
                 path: "/",
                 element: <Home></Home>
@@ -37,16 +40,29 @@ export const myRoute = createBrowserRouter([
             {
                 path: "/allProduct",
                 element: <AllProducts></AllProducts>,
-                loader: ()=> fetch("http://localhost:5001/product")
+                loader: () => fetch("http://localhost:5001/product")
             },
+            {
+                path: "/brands/:brandName", // Use a dynamic parameter for the brand name
+                element: <BrandDetails />, // Render the BrandDetails component
+            },
+            {
+                path: "/", // Use the root path
+                element: <BrandList />, // Render the BrandList component
+              },
             {
                 path: "/categories/categoriesDetails/:id",
                 element: <PrivateRoute><CategoryDetails></CategoryDetails></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5001/categories/categoriesDetails/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5001/categories/categoriesDetails/${params.id}`)
             },
             {
                 path: "/addProduct",
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
+            },
+            {
+                path: "/updateProduct/:id",
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5001/product/${params.id}`)
             },
             {
                 path: "/myCart",
@@ -55,9 +71,9 @@ export const myRoute = createBrowserRouter([
             {
                 path: "/productDetails/:id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5001/product/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5001/product/${params.id}`)
             },
-            
+
         ]
     }
 ])

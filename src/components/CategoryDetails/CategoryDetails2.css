@@ -1,0 +1,58 @@
+/* product-list.css */
+
+.brand-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.brand-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 16px;
+}
+
+.product-description {
+    font-size: 14px;
+}
+
+.product-rating {
+    font-size: 14px;
+}
+
+.product-brand {
+    font-size: 14px;
+}
+
+.product-button {
+    margin-top: 10px;
+}
