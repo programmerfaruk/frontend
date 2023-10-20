@@ -8,7 +8,7 @@ const ProductList = () => {
 
     useEffect(() => {
         // Fetch data from your API or database
-        fetch('http://localhost:5001/product')
+        fetch('https://technology-and-electronics-backend.vercel.app/product')
             .then((response) => response.json())
             .then((data) => {
                 setProducts(data);

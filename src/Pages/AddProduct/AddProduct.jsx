@@ -28,7 +28,7 @@ const AddProduct = () => {
         };
 
         console.log(newProduct);
-        fetch("http://localhost:5001/product", {
+        fetch("https://technology-and-electronics-backend.vercel.app/product", {
             method: "POST",
             headers:{
                 "Content-Type": "application/json"
@@ -42,12 +42,12 @@ const AddProduct = () => {
                         title: 'Success!',
                         text: 'New Product Added',
                         icon: 'success',
-                        confirmButtonText: 'ok'
+                        confirmButtonText: 'OK'
                     });
 
                     // Reset the form using the formRef
                     form.reset();
-                    setSelectedBrand("defaultChecked");
+                    setSelectedBrand('');
                 }
             })
     };
@@ -56,10 +56,10 @@ const AddProduct = () => {
         <div>
             <h1 className='text-center text-3xl my-4 font-semibold text-red-500'>Add New Product</h1>
             <form ref={formRef} className="grid grid-cols-2 w-11/12 mx-auto gap-4 my-5" onSubmit={handleAddProduct}>
-                <input name="photo" type="text" placeholder="Product Image URL" className="input input-bordered w-full max-w-xs" />
-                <input name="product" type="text" placeholder="Product Name" className="input input-bordered w-full max-w-xs" />
-                <select className="select w-full max-w-xs" onChange={handleSelectChange}>
-                    <option disabled defaultChecked selected>Select your Brand</option>
+                <input name="photo" type="text" placeholder="Product Image URL" className="input input-bordered w-full max-w-xs" required />
+                <input name="product" type="text" placeholder="Product Name" className="input input-bordered w-full max-w-xs" required />
+                <select className="select w-full max-w-xs" onChange={handleSelectChange} required>
+                    <option value="">Select your Brand</option>
                     <option value="Apple">Apple</option>
                     <option value="Samsung">Samsung</option>
                     <option value="Sony">Sony</option>
@@ -67,9 +67,9 @@ const AddProduct = () => {
                     <option value="Intel">Intel</option>
                     <option value="MI">MI</option>
                 </select>
-                <input name="price" type="text" placeholder="Price" className="input input-bordered w-full max-w-xs" />
-                <textarea name="short" className="textarea textarea-bordered col-auto" placeholder="Short description"></textarea>
-                <input name="rating" type="text" placeholder="Rating" className="input input-bordered w-full max-w-xs" />
+                <input name="price" type="text" placeholder="Price" className="input input-bordered w-full max-w-xs" required />
+                <textarea name="short" className="textarea textarea-bordered col-auto" placeholder="Short description" required></textarea>
+                <input name="rating" type="text" placeholder="Rating" className="input input-bordered w-full max-w-xs" required />
                 <input type="submit" className="btn btn-primary" value="Add Product" />
             </form>
         </div>

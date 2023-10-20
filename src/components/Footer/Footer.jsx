@@ -5,7 +5,7 @@ const Footer = () => {
             <aside>
             <img src={logo} width={100} alt="" />
 
-                <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                <p>Gadget Grove Ltd.<br />Providing reliable tech since 1992</p>
             </aside>
             <nav>
                 <header className="footer-title">Services</header>

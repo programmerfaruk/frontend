@@ -13,8 +13,8 @@ const Navbar = () => {
         <li><NavLink to="/categories">Categories</NavLink></li>
         <li><NavLink to="/addProduct">Add Product</NavLink></li>
         <li><NavLink to="/allProduct">All Product</NavLink></li>
-        <li><NavLink to="/updateProduct">Update Product</NavLink></li>
-        <li><NavLink to="/myCart">My Cart</NavLink></li>
+        {/* <li><NavLink to="/updateProduct">Update Product</NavLink></li> */}
+        {/* <li><NavLink to="/myCart">My Cart</NavLink></li> */}
     </>
 
     const handleLogOut = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="sticky z-10 top-0 bg-base-100 font-semibold">
+        <div className="sticky z-10 top-0 bg-base-100 font-semibold shadow-md">
             <div className="navbar   md:w-11/12  md:mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -44,12 +44,11 @@ const Navbar = () => {
                     </div>
                     <Link to="/"><img className="md:w-20" src={Logo2} alt="Omexo" /></Link>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 shadow-md">
+                <div className="navbar-center hidden lg:flex ">
+                    <ul className="menu menu-horizontal px-1 ">
                         {links}
                     </ul>
                 </div>
-                <input type="checkbox" className="toggle toggle-md mx-10" checked />
                 <div className="navbar-end">
                     
                     {
